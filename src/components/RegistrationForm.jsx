@@ -135,8 +135,8 @@ function RegistrationForm() {
           <InputField icon={<FaEnvelope />} name="email" label="E-Mail" placeholder="Enter your email" value={formData.email} onChange={handleChange} error={formErrors.email} />
           <InputField icon={<FaPhone />} name="phone" label="Mobile Number" placeholder="Enter your mobile number" value={formData.phone} onChange={handleChange} error={formErrors.phone} />
 
-          <label className="text-gray-700 font-medium mt-6" style={{marginTop: "500px"}}>Interested in:</label>
-          <div className="space-y-2 ">
+          <label className="text-gray-700 font-medium mt-6">Interested in:</label>
+          <div className="space-y-2">
             {["Website Designing", "French Learning", "German Learning", "Korean Learning", "Spanish Learning", "English Communication Classes"].map((interest) => (
               <label key={interest} className="flex items-center space-x-2">
                 <input
@@ -167,7 +167,7 @@ function InputField({ icon, name, label, placeholder, value, onChange, error }) 
         {icon && <span className="text-lg text-gray-500 mr-2">{icon}</span>}
         <input type="text" name={name} placeholder={placeholder} className="input flex-1 bg-transparent outline-none" value={value} onChange={onChange} required />
       </div>
-      {error && <p className="text-red-600 text-sm my-4">{error} <span className="text-sm">❗</span></p>}
+      {error && <p className="text-red-600 mt-1">{error} <span className="text-xl">❗</span></p>}
     </div>
   );
 }
